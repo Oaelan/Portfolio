@@ -20,7 +20,6 @@ const eslintConfig = [
       semi: ['error', 'always'],
       eqeqeq: 'error',
       'react/jsx-key': 'error',
-      'react/no-array-index-key': 'warn',
       '@typescript-eslint/naming-convention': [
         'error',
         // 변수 - camelCase (React 컴포넌트 제외)
@@ -52,10 +51,9 @@ const eslintConfig = [
           selector: 'function',
           format: ['camelCase', 'PascalCase'],
         },
-        // 매개변수 - camelCase
         {
           selector: 'parameter',
-          format: ['camelCase'],
+          format: null,
         },
         // 객체 프로퍼티 - camelCase
         {
