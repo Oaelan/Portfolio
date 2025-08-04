@@ -1,9 +1,24 @@
 @import 'tailwindcss';
 
+::selection {
+  @apply bg-emerald-300 text-emerald-700;
+  @apply dark:bg-emerald-400 dark:text-emerald-950;
+}
+
+@font-face {
+  font-family: 'NeoDunggeunmo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
+  --font-family-sans: 'NeoDunggeunmo', 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', 'Noto Sans KR', sans-serif;
   --color-black: #131212;
   --color-light-black: #5a5959ff;
   --color-white: #f1f1f1;
   --color-light-gray: #d9d7d7;
   --color-gray: #b8b4b4;
+  --color-light-dark: #2a2a29;
 }

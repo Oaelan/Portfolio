@@ -18,7 +18,7 @@ const carouselClassName = cva(
       w-[400px] md:w-[600px] lg:w-[800px]
       flex flex-col justify-center items-center`
 );
-function Carousel({ images, className, ...props }: CarouselProps) {
+function Carousel({ images, className }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [transition, setTransition] = useState('transform 0.5s ease-in-out');
   // 인디케이터에서 사용할 이미지 배열의 갯수와 인덱스
