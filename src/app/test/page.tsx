@@ -2,6 +2,7 @@ import Carousel from '../components/ui/Carousel';
 import { FaHtml5, FaJs, FaReact, FaCss3Alt } from 'react-icons/fa';
 import { BiLogoTypescript } from 'react-icons/bi';
 import { RiNextjsFill } from 'react-icons/ri';
+import Title from '../components/ui/Title';
 
 function Test() {
   const iconSize = 150;
@@ -33,8 +34,11 @@ function Test() {
     },
   ];
   return (
-    <div className="flex justify-center items-center h-screen">
-      <Carousel images={imgs} />
+    <div className="pt-15 flex justify-center  h-screen">
+      <div>
+        <Title title="Tech Stack" />
+        <Carousel images={imgs} />
+      </div>
     </div>
   );
 }
