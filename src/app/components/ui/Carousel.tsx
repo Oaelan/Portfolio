@@ -15,7 +15,7 @@ const carouselClassName = cva(
   `carousel-container py-2
       dark:bg-linear-to-r/srgb dark:from-black dark:to-light-black dark:outline-gray      
       bg-linear-to-r/srgb from-light-gray to-white outline outline-black
-      w-[400px] md:w-[600px] lg:w-[800px]
+      w-[300px] md:w-[600px] lg:w-[800px]
       flex flex-col justify-center items-center`
 );
 function Carousel({ images, className }: CarouselProps) {

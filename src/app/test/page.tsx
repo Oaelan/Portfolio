@@ -1,10 +1,10 @@
 'use client';
-import Main from '../components/Main';
+import About from '../components/about/About';
 
-export default function BasicExample() {
+export default function test() {
   return (
     <div className="h-screen px-50 py-20 flex justify-center items-center">
-      <Main />
+      <About />
     </div>
   );
 }
