@@ -24,11 +24,15 @@ export default function Typing({
   const [currentTextIndex, setCurrentTextIndex] = useState(0); //현재 텍스트 인덱스
   const [currentCharIndex, setCurrentCharIndex] = useState(0); //현재 문자 인덱스
   const [isTyping, setIsTyping] = useState(true); //타이핑 상태
-  const [showCursor, setShowCursor] = useState(cursor); //커서 상태
+  const [showCursor, setShowCursor] = useState(false); //커서 상태 - false로 초기화
 
   //커서 효과
   useEffect(() => {
-    if (!cursor) return;
+    if (!cursor) {
+      setShowCursor(false); // cursor가 false면 커서 숨기기
+      return;
+    }
+
     const timer = setInterval(() => {
       setShowCursor((prev) => !prev);
     }, cursorSpeed);
@@ -80,9 +84,15 @@ export default function Typing({
   }, [currentCharIndex, currentTextIndex, isTyping, texts, speed, delay, loop]);
 
   return (
-    <div className={cn('text-2xl font-bold h-fit whitespace-pre-line', className)}>
+    <div className={cn('font-bold h-fit whitespace-pre-line', className)}>
       {displayText}
-      <span className={`transition-opacity duration-75 ${showCursor ? 'opacity-100' : 'opacity-0'}`}>|</span>
+      <span
+        className={`transition-opacity duration-75 ${showCursor ? 'opacity-100' : 'opacity-0'} ${
+          cursor ? 'inline' : 'hidden'
+        }`}
+      >
+        |
+      </span>
     </div>
   );
 }

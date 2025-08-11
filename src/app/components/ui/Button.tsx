@@ -10,9 +10,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const buttonClassName = cva(
-  `w-fit cursor-pointer bg-emerald-500 text-white py-3 px-10
+  `w-fit cursor-pointer dark:bg-emerald-500 bg-light-dark text-white py-3 px-10
   rounded-full text-2xl 
-  hover:bg-emerald-600 transition-colors`,
+  dark:hover:bg-emerald-600 hover:bg-gray-500 transition-colors`,
   {
     variants: {
       shape: {

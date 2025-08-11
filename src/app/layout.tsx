@@ -1,10 +1,16 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import Nav from './components/Nav';
 
 export const metadata: Metadata = {
   title: "Aelan's Portfolio",
   description: "Aelan's Portfolio",
+};
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({
@@ -14,9 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className="font-family-sans">
-      <body className="dark:bg-black dark:text-white pt-15">
+      <body className="dark:bg-black dark:text-white">
         <Nav />
-        {children}
+        <main className="pt-15 min-h-screen">{children}</main>
       </body>
     </html>
   );

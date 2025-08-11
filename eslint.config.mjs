@@ -77,6 +77,8 @@ const eslintConfig = [
         },
       ],
     },
+    // 캐시 비활성화
+    cache: false,
   },
   {
     // 해당 설정 파일에서는 eslint 설정 적용안되게하기

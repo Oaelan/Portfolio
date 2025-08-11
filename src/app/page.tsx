@@ -1,3 +1,9 @@
+import Main from './components/main/Main';
+
 export default function Home() {
-  return <div>123</div>;
+  return (
+    <div className="h-screen flex justify-center items-center">
+      <Main />
+    </div>
+  );
 }
