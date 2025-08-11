@@ -1,7 +1,8 @@
+import { HTMLAttributes } from 'react';
 import { cn } from '../../utils/cn';
 import { cva } from 'class-variance-authority';
 
-interface TitleProps extends React.HTMLAttributes<HTMLDivElement> {
+interface TitleProps extends HTMLAttributes<HTMLDivElement> {
   title: string;
 }
 
