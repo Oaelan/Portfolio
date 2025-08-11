@@ -17,7 +17,7 @@ function Nav() {
           Projects
         </Link>
         <Link className="hover:text-emerald-400" href="/contact">
-          Contact
+          Feedback
         </Link>
       </menu>
     </nav>

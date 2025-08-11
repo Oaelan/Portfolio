@@ -1,11 +1,11 @@
 'use client';
 
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo, useCallback, HTMLAttributes } from 'react';
 import Indicator from './Indicator';
 import { cva } from 'class-variance-authority';
 import { cn } from '../../utils/cn';
 
-interface CarouselProps extends React.HTMLAttributes<HTMLDivElement> {
+interface CarouselProps extends HTMLAttributes<HTMLDivElement> {
   images: {
     name: string;
     icon: React.ReactElement;
